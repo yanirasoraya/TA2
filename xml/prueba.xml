@@ -2,6 +2,18 @@
 
 <valores>
 
+<testDivIgual>
+<valor1>8</valor1>
+<valor2>4</valor2>
+<esperado>2</esperado>
+</testDivIgual>
+
+
+<testDivDiferente>
+<valor1>8</valor1>
+<valor2>4</valor2>
+<esperado>3</esperado>
+</testDivDiferente>
 
 <testSumaIgual>
 <valor1>2</valor1>

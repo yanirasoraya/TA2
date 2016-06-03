@@ -7,18 +7,14 @@ import java.util.List;
 
 public class Pruebas {
     
-    public float Division(int n1, int n2)
+    public float Division(float n1, float n2)
     {
         float division = 0;
         
-        try
-        {
-            division = (int)(n1 / n2);            
-        }
-        catch(Exception e)
-        {
-            System.out.println(e.getMessage());
-        }
+        
+            division = (float)(n1 / n2);            
+        
+       
         return division;        
     }
     

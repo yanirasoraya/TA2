@@ -46,6 +46,38 @@ public class PruebasTest {
     /**
      * Test of Division method, of class Pruebas.
      */
+    
+    
+      @Test
+    public void TestDivIgual() {
+        
+        
+        Pruebas p= new Pruebas();
+        
+
+        
+         Assert.assertEquals(p.Division(Float.parseFloat(Lector.leer("testDivIgual", "valor1")),
+                Float.parseFloat(Lector.leer("testDivIgual", "valor2"))),Float.parseFloat(Lector.leer("testDivIgual", "esperado")),0);
+        
+               
+    }
+   
+   
+      @Test
+    public void TestDivDiferente() {
+        
+        
+        Pruebas p= new Pruebas();
+        
+
+       
+        
+         Assert.assertNotEquals(p.Division(Integer.parseInt(Lector.leer("testDivDiferente", "valor1")),
+                Integer.parseInt(Lector.leer("testDivDiferente", "valor2"))),Integer.parseInt(Lector.leer("testDivDiferente", "esperado")));
+        
+               
+    }
+   
          @Test
     public void probarSumaIguales() {
         
@@ -123,6 +155,8 @@ System.out.println(""+ Lector.leer("testSumaIgual", "valor2"));
     /**
      * Test of FraseIgual method, of class Pruebas.
      */
+  
+    
     @Test
     public void testFraseIgual() {
    
