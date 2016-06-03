@@ -16,7 +16,7 @@ public class NewClass {
     public static void main (String[] args){
         
         Lector l = new Lector();
-        System.out.println(l.Leer("testSumaIgual","valor1"));
+        System.out.println(l.leer("testSumaIgual","valor1"));
     }
     
 }

@@ -52,11 +52,11 @@ public class PruebasTest {
         
         Pruebas p= new Pruebas();
         
-System.out.println(""+ Lector.Leer("testSumaIgual", "valor2"));
+System.out.println(""+ Lector.leer("testSumaIgual", "valor2"));
        
         
-         Assert.assertEquals(p.suma(Integer.parseInt(Lector.Leer("testSumaIgual", "valor1")),
-                Integer.parseInt(Lector.Leer("testSumaIgual", "valor2"))),Integer.parseInt(Lector.Leer("testSumaIgual", "esperado")));
+         Assert.assertEquals(p.suma(Integer.parseInt(Lector.leer("testSumaIgual", "valor1")),
+                Integer.parseInt(Lector.leer("testSumaIgual", "valor2"))),Integer.parseInt(Lector.leer("testSumaIgual", "esperado")));
         
                
     }
@@ -69,8 +69,8 @@ System.out.println(""+ Lector.Leer("testSumaIgual", "valor2"));
         
        
         
-         Assert.assertNotEquals(p.suma(Integer.parseInt(Lector.Leer("testSumaDiferentes", "valor1")),
-                Integer.parseInt(Lector.Leer("testSumaDiferentes", "valor2"))),Integer.parseInt(Lector.Leer("testSumaDiferentes", "esperado")));
+         Assert.assertNotEquals(p.suma(Integer.parseInt(Lector.leer("testSumaDiferentes", "valor1")),
+                Integer.parseInt(Lector.leer("testSumaDiferentes", "valor2"))),Integer.parseInt(Lector.leer("testSumaDiferentes", "esperado")));
         
         
                
@@ -128,8 +128,8 @@ System.out.println(""+ Lector.Leer("testSumaIgual", "valor2"));
    
          Pruebas p= new Pruebas();
         
-         Assert.assertNotEquals(p.FraseIgual(String.valueOf(Lector.Leer("testFraseIgual", "text1")), String.valueOf(Lector.Leer("testFraseIgual", "text2"))),
-                 Lector.Leer("testFraseIgual", "esperado"));
+         Assert.assertEquals(p.FraseIgual(String.valueOf(Lector.leer("testFraseIgual", "text1")), String.valueOf(Lector.leer("testFraseIgual", "text2"))),
+                 Lector.leer("testFraseIgual", "esperado"));
     }    
     
     
@@ -137,8 +137,8 @@ System.out.println(""+ Lector.Leer("testSumaIgual", "valor2"));
     public void testFraseDiferente() {
         Pruebas p= new Pruebas();
         
-         Assert.assertNotEquals(p.FraseIgual(String.valueOf(Lector.Leer("testFraseDiferente", "text1")), String.valueOf(Lector.Leer("testFraseDiferente", "text2"))),
-                 Lector.Leer("testFraseDiferente", "esperado"));
+         Assert.assertNotEquals(p.FraseIgual(String.valueOf(Lector.leer("testFraseDiferente", "text1")), String.valueOf(Lector.leer("testFraseDiferente", "text2"))),
+                 Lector.leer("testFraseDiferente", "esperado"));
     }
     /**
      * Test of Pares method, of class Pruebas.

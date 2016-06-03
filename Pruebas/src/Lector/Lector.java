@@ -13,40 +13,29 @@ import org.w3c.dom.Node;
 
 
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author YANI
- */
 public class Lector {
-    
-    public static String Leer(String tag, String subtag)
-    {
-        
-        try{
-            File file=new File("XML//prueba.xml");
-            DocumentBuilderFactory dbFactory= DocumentBuilderFactory.newInstance();
-            DocumentBuilder dbBuilder= dbFactory.newDocumentBuilder();
-            Document docu= dbBuilder.parse(file);
-            docu.getDocumentElement().normalize();
+	
+	public static String leer(String tag, String subtag){
 
-            NodeList nList= docu.getElementsByTagName(tag);
-            Node nNode= nList.item(0);
-            
-            Element e=  (Element) nNode;
-            return e.getElementsByTagName(subtag).item(0).getTextContent();
-        }
-        catch(Exception e)
-        {            
-            e.printStackTrace();
-        }
-        
-        return null;
-    }
-    
+	      try {	
+	         File inputFile = new File("xml//prueba.xml");
+	         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+	         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+	         Document doc = dBuilder.parse(inputFile);
+	         doc.getDocumentElement().normalize();
+	         
+	         NodeList nList = doc.getElementsByTagName(tag);
+	         Node nNode = nList.item(0);
+	         
+	         Element e = (Element) nNode;
+	            return e.getElementsByTagName(subtag).item(0).getTextContent();
+	         
+	      } catch (Exception e) {
+                  e.printStackTrace();
+              }
+		return null;
+
+	}
+	 
 }
